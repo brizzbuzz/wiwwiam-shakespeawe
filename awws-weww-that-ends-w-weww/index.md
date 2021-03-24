@@ -9,4 +9,4 @@
 
 ## Act 2
 
-[pawis. (ꈍᴗꈍ) the king's p-pawace. (⑅˘꒳˘)](act2/a2s1.uwu.md)
+[scene 1: pawis. (ꈍᴗꈍ) the king's p-pawace. (⑅˘꒳˘)](act2/a2s1.uwu.md)
