@@ -7,7 +7,7 @@
 
 | Status  | Work  | 
 |---|---|
-| In progress  | All's Well That Ends Well  | 
+|  ✅ | All's Well That Ends Well  | 
 | TODO | As You Like It  |
 |  TODO |  The Comedy of Errors  |
 |  TODO |  Cymbeline  |
