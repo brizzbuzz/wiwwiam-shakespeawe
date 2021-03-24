@@ -1,1 +1,1 @@
-(AWTEW)[awws-weww-that-ends-w-weww]
+[awws-weww-that-ends-w-weww]
