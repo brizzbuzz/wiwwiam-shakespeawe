@@ -1,6 +1,7 @@
 extern crate reqwest;
 extern crate select;
 
+use std::{thread, time};
 use std::fs::create_dir_all;
 use std::fs::File;
 use std::io::Write;
@@ -9,15 +10,34 @@ use select::document::Document;
 use select::predicate::{Any, Name};
 use string_builder::Builder;
 
+struct Book {
+  title: String,
+  acts: Vec<u8>
+}
+
 fn main() -> std::io::Result<()> {
-  let act = 3;
-  let scene = 5;
-  let book = "awws-weww-that-ends-w-weww";
-  create_dir_all(format!("../{}/act{}", book, act))?;
-  parse_scene(&format!("http://shakespeare.mit.edu/allswell/allswell.{}.{}.html", act, scene), &format!("../{}/act{}/a{}s{}.md", book, act, act, scene))
+  let book = Book {
+    title: String::from("awws-weww-that-ends-w-weww"),
+    acts: vec![3, 5, 7, 5, 3]
+  };
+  for (act, scene_count) in book.acts.iter().enumerate() {
+    let real_act = act + 1;
+    create_dir_all(format!("../{}/act{}", book.title, real_act))?;
+    for scene in 1..scene_count + 1 {
+      let url = &format!("http://shakespeare.mit.edu/allswell/allswell.{}.{}.html", real_act, scene);
+      let path = &format!("../{}/act{}/a{}s{}.md", book.title, real_act, real_act, scene);
+      parse_scene(url, path);
+      let sleepy_time = time::Duration::from_secs(5);
+      println!("Sleeping for {} seconds", sleepy_time.as_secs().to_string());
+      thread::sleep(sleepy_time)
+    }
+  }
+  Ok(())
 }
 
 fn parse_scene(url: &str, path: &str) -> std::io::Result<()> {
+  println!("{}", url);
+  println!("{}", path);
   let resp = reqwest::blocking::get(url).unwrap();
   assert!(resp.status().is_success());
 
