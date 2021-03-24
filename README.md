@@ -1,5 +1,6 @@
 # ⚠️ Work in Progress ⚠️
 
+### Source [complete works of shakespeare](http://shakespeare.mit.edu)
 ### Uses [uwuify](https://github.com/Daniel-Liu-c0deb0t/uwu) for transcoding
 
 # Status
