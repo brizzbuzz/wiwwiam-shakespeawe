@@ -11,7 +11,7 @@ use string_builder::Builder;
 
 fn main() -> std::io::Result<()> {
   let act = 3;
-  let scene = 7;
+  let scene = 5;
   let book = "awws-weww-that-ends-w-weww";
   create_dir_all(format!("../{}/act{}", book, act))?;
   parse_scene(&format!("http://shakespeare.mit.edu/allswell/allswell.{}.{}.html", act, scene), &format!("../{}/act{}/a{}s{}.md", book, act, act, scene))
@@ -40,19 +40,19 @@ fn parse_scene(url: &str, path: &str) -> std::io::Result<()> {
             let name_attr = node.attr("name").unwrap();
             if name_attr.chars().all(char::is_numeric) {
               // text block
-              builder.append(node.text());
+              builder.append(node.text().trim());
               builder.append("\n\n");
             } else {
               // char block
               builder.append("### ");
-              builder.append(node.text());
+              builder.append(node.text().trim());
               builder.append("\n");
             }
           }
         }
         "i" => {
           builder.append("#### ");
-          builder.append(node.text());
+          builder.append(node.text().trim());
           builder.append("\n");
         }
         _ => ()
