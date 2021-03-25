@@ -16,16 +16,17 @@ struct Book {
 }
 
 fn main() -> std::io::Result<()> {
+  let slug = "asyoulikeit/asyoulikeit";
   let book = Book {
-    title: String::from("awws-weww-that-ends-w-weww"),
-    acts: vec![3, 5, 7, 5, 3]
+    title: String::from("as-you-wike-it"),
+    acts: vec![3, 7, 5, 3, 4]
   };
   for (act, scene_count) in book.acts.iter().enumerate() {
     let real_act = act + 1;
-    create_dir_all(format!("../{}/act{}", book.title, real_act))?;
+    create_dir_all(format!("../books/{}/act{}", book.title, real_act))?;
     for scene in 1..scene_count + 1 {
-      let url = &format!("http://shakespeare.mit.edu/allswell/allswell.{}.{}.html", real_act, scene);
-      let path = &format!("../{}/act{}/a{}s{}.md", book.title, real_act, real_act, scene);
+      let url = &format!("http://shakespeare.mit.edu/{}.{}.{}.html", slug, real_act, scene);
+      let path = &format!("../books/{}/act{}/a{}s{}.md", book.title, real_act, real_act, scene);
       parse_scene(url, path);
       let sleepy_time = time::Duration::from_secs(5);
       println!("Sleeping for {} seconds", sleepy_time.as_secs().to_string());
