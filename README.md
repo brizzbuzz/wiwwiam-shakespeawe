@@ -9,7 +9,7 @@
 |---|---|
 |  ✅ | [All's Well That Ends Well](https://rgbrizzlehizzle.github.io/wiwwiam-shakespeawe/awws-weww-that-ends-w-weww/)  | 
 | ✅ | [As You Like It](https://rgbrizzlehizzle.github.io/wiwwiam-shakespeawe/as-you-wike-it/)  |
-|  TODO |  The Comedy of Errors  |
+|  ✅ |  [The Comedy of Errors](https://rgbrizzlehizzle.github.io/wiwwiam-shakespeawe/the-comedy-of-ewwows)  |
 |  TODO |  Cymbeline  |
 |  TODO | Love's Labours Lost   |
 |  TODO |  Measure for Measure  |
