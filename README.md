@@ -8,7 +8,7 @@
 | Status  | Work  | 
 |---|---|
 |  ✅ | [All's Well That Ends Well](https://rgbrizzlehizzle.github.io/wiwwiam-shakespeawe/awws-weww-that-ends-w-weww/)  | 
-| TODO | As You Like It  |
+| ✅ | [As You Like It](https://rgbrizzlehizzle.github.io/wiwwiam-shakespeawe/as-you-wike-it/)  |
 |  TODO |  The Comedy of Errors  |
 |  TODO |  Cymbeline  |
 |  TODO | Love's Labours Lost   |
